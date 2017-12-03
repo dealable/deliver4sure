@@ -1,0 +1,31 @@
+body, html, #render-target, #map-wrapper {
+   height: 100%;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+#map-wrapper {
+  border-width: 5px;
+  border: 10px red;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.map-container {
+  width: 100%; height: 300px;
+}
+
+body {
+  margin: 0;
+}
+
+/* .map-container {
+  width: 800px;
+  max-width: 100%;
+  height: 500px;
+} */
+
+#bottom-nav {
+  position: fixed;
+  bottom: 0px;
+}
