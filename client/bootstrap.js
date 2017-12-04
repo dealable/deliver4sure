@@ -5,7 +5,7 @@ import createFixtureData from '../imports/api/fixtureData';
 if (Meteor.isClient) {
   Meteor.startup(function() {
     // createFixtureData()
-    demoFunctions();
+    // demoFunctions();
     // load Goolge Maps
 
     const apiKeyGoogleMaps = 'AIzaSyDbC7YyTa2beNZbALqngl-3LUt0UqQc8nk';

@@ -4,8 +4,8 @@ import { render } from 'react-dom';
  
 import App from '../imports/ui/App2.js';
 
-// import '../imports/router/routes';
+import '../imports/router/routes';
  
 Meteor.startup(() => {
-  render(<App />, document.getElementById('render-target'));
+  // render(<App />, document.getElementById('render-target'));
 });

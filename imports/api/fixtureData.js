@@ -10,20 +10,35 @@ const deliveryDays = [
 ];
 console.log('deliveryDays', deliveryDays, );
 
-const chatList = [
+let chatHistory = [
   {
+    sender: "customer",
+    message: "Ok great, I am here now.",
+    image: "images/ok-128.jpg",
+  },
+  {
+    sender: "customer",
+    message: "See you soon.",
+    image: "images/ok-128.jpg",
+  },
+];
+
+const small = () => ({
     active: true,
     participants: [],
     deliveryId: 'delivery1',
     chatHistory: [
       {
+        sender: "driver",
+        message: "Hey your parcel will arrive 20 minutes early at 2:20pm.",
+        image: "images/kolage-128.jpg",
         read: false,
-        message: 'Hi, when will my package arrive?',
         createdAt: new Date('2017-12-02'),
-        sender: '',
       }
     ],
-  },
+  });
+const chatList = [
+  small(),
   {
     active: true,
     participants: [],
@@ -131,16 +146,17 @@ const deliveries = [
 
 export default function createFixtureData() {
   deliveryDays.map((deliveryDay)=>{
-    const deliveryDayId = Random.id();
+    const deliveryDayId = "g8nrTvmpDsxS2GWmp";
+      // Random.id();
     const createdAt = new Date();
-    console.log('createding fixture data for ', deliveryDayId, createdAt);
+    console.log('creating fixture data for ', deliveryDayId, createdAt);
     const chatData = _.map(chatList, (chatObj)=>{
       const chatObj2 = _.extend(chatObj, { deliveryDayId, createdAt });
       Chats.insert(chatObj2);
     })
-    const deliveryData = _.map(deliveries, (deliveryObj)=>{
-      const deliveryObj2 = _.extend(deliveryObj, { deliveryDayId, createdAt });
-      Deliveries.insert(deliveryObj2);
-    })
+    // const deliveryData = _.map(deliveries, (deliveryObj)=>{
+    //   const deliveryObj2 = _.extend(deliveryObj, { deliveryDayId, createdAt });
+    //   Deliveries.insert(deliveryObj2);
+    // })
   });
 };

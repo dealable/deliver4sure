@@ -2,7 +2,7 @@
 import locationDict from './lib/locationDict';
 
 export function updateMap({ destination, origin, travelMode }) {
-  console.log('typeof google', typeof google);
+  // console.log('updateMap', destination, origin, travelMode, typeof google);
   if(typeof google !== 'undefined') {
     var map = new google.maps.Map(document.getElementById('routeMap'), {
       center: locationDict.block71sf,

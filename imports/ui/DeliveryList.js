@@ -25,7 +25,6 @@ import { dataFilter } from '../api/demoFilters';
 // Map
 
 import { updateMap } from './RouteMap';
-console.log('updateMap', updateMap);
 
 let INIT = true;
 let INIT2 = true;

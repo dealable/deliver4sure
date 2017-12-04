@@ -7,7 +7,7 @@ export default locationDict = {
   block71sf: {
     lat: 37.7812044,
     lng: -122.3968774,
-    zoom: 15,
+    zoom: 20,
   },
   block71sg: {
     lat: 1.2948422,
